@@ -141,6 +141,6 @@ def main(coco_dir):
    
 
 if __name__ == '__main__':
-  root_dir = os.environ['HOME'] if 'DOME_HOME' not in os.environ else os.environ['DOME_HOME']
+  root_dir = os.environ['HOME']
   data_dir = Path(root_dir) / 'datasets' / 'MS-COCO'
   main(data_dir)

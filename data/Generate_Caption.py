@@ -149,7 +149,7 @@ def main(coco_dir, cur_dir):
   print ('Total has {:} image-caption pairs'.format(len(training+testing)))
 
 if __name__ == '__main__':
-  root_dir = os.environ['HOME'] if 'DOME_HOME' not in os.environ else os.environ['DOME_HOME']
+  root_dir = os.environ['HOME']
   data_dir = Path(root_dir) / 'datasets' / 'MS-COCO'
   current_dir = Path(__file__).parent.resolve() / 'COCO-Caption'
   main(data_dir, current_dir)
