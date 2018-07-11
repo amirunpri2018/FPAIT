@@ -1,5 +1,3 @@
-from .basetask import MetaTask
-from .metadataset import MetaDataset
 from .coco_utils import TQASample
 from .coco_utils import TICSample
 from .qatask import MetaQATask

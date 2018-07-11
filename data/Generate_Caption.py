@@ -138,6 +138,7 @@ def main(coco_dir, cur_dir):
             'training' :   training,
             'testing'  :   testing}
   torch.save(icdata, save_path)
+  print ('Save into {:}'.format(save_path))
   blanks = set()
   for caption in training:
     blanks.add(caption.blank)

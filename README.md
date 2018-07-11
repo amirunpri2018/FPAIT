@@ -1,6 +1,5 @@
 # Fast Parameter Adaptation for Few-shot Image Captioning and Visual Question Answering
 
-
 ## Data Preparation
 
 ### Download
@@ -20,4 +19,18 @@ Make directory at `~/datasets/MS-COCO`.
 ```
 cd cocoapi
 make
+```
+
+### Few-shot Image Caption
+In the directory `data`, run:
+```
+python Generate_Caption.py
+python Generate_VQA.py
+```
+After run the above two commands, you can obtain `data/COCO-Caption/few-shot-coco.pth` for few-shot image caption.
+
+## Citation
+If you find this project help your research, please cite:
+```
+
 ```
