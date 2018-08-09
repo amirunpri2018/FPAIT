@@ -57,6 +57,8 @@ def main(coco_dir, cur_dir):
   coco_class_name.close()
   concepts = [x for x in concepts if ' ' not in x]
 
+  print ('COCO-DIR : {:}'.format(coco_dir))
+  assert os.path.exists(coco_dir), 'COCO DIR does not exist : {:}'.format(coco_dir)
   all_captions = []
   for sentences, image in zip(cap_coco_data, images):
     file_path = coco_dir / 'trainval2014' / image['file_path'].split('/')[1]

@@ -1,5 +1,7 @@
 # Fast Parameter Adaptation for Few-shot Image Captioning and Visual Question Answering
 
+By Xuanyi Dong, Linchao Zhu, De Zhang, Yi Yang, Fei Wu
+
 ## Data Preparation
 
 ### Download
@@ -15,22 +17,43 @@ Make directory at `~/datasets/MS-COCO`.
 -- trainval2014
 ```
 
+
 ### Compile coco api
 ```
 cd cocoapi
 make
 ```
 
+
 ### Few-shot Image Caption
 In the directory `data`, run:
 ```
 python Generate_Caption.py
+```
+After run the above command, you can obtain `data/COCO-Caption/few-shot-coco.pth` for few-shot image caption.
+
+
+### Few-shot Visual Question Answering
+In the directory `data`, run:
+```
 python Generate_VQA.py
 ```
-After run the above two commands, you can obtain `data/COCO-Caption/few-shot-coco.pth` for few-shot image caption.
+After run the above command, you can obtain `data/Toronto-COCO-QA/object.pth` for few-shot visual question answering.
+
+### Show Samples
+We give an example to show how to read the pre-processed data
+```
+python show_data.py
+```
+
 
 ## Citation
 If you find this project help your research, please cite:
 ```
-
+@inproceedings{dong2018fpait,
+  title     = {Fast Parameter Adaptation for Few-shot Image Captioning and Visual Question Answering},
+  author    = {Dong, Xuanyi and Zhu, Linchao and Zhang, De and Yang, Yi and Wu, Fei},
+  booktitle = {Proceedings of the 2018 ACM on Multimedia Conference},
+  year      = {2018}
+}
 ```
